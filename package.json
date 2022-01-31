@@ -1,30 +1,41 @@
 {
-  "name": "typescript-express",
+  "name": "typescript-minesweeper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minesweeper API made in typescript",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/app.ts",
     "prod": "node dist/app.js",
     "build": "tsc",
-    "lint": "eslint . --ext .ts --fix"
+    "lint": "eslint . --ext .ts --fix",
+    "test": "jest"
   },
-  "author": "",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  },
+  "author": "Carolina Gonzalez (carolinagonzalez794@gmail.com)",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "@babel/preset-typescript": "7.16.7",
+    "body-parser": "1.19.1",
+    "cors": "2.8.5",
+    "express": "4.17.1"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.11",
-    "@types/node": "^14.14.22",
+    "@babel/core": "7.16.12",
+    "@babel/preset-env": "7.16.11",
+    "@types/cors": "2.8.12",
+    "@types/express": "4.17.11",
+    "@types/jest": "^27.4.0",
+    "@types/node": "14.14.22",
     "@typescript-eslint/eslint-plugin": "4.9.1",
     "@typescript-eslint/parser": "4.9.1",
+    "babel-jest": "27.4.6",
     "eslint": "7.15.0",
     "eslint-config-airbnb-typescript": "12.0.0",
     "eslint-plugin-import": "2.22.1",
+    "jest": "27.4.7",
     "nodemon": "^2.0.7",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"

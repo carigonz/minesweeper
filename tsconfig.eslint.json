@@ -4,7 +4,8 @@
   "include": [
     "src/**/*.ts",
     "src/defs.d.ts",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "babel.config.js",
   ],
   "exclude": [
     "dist",
