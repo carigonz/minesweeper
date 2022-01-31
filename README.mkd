@@ -1,8 +1,14 @@
-# Express with Typescript
+# Typescript minesweeper API
 
-This repo is linked to this article https://dev.to/codeozz/express-with-typescript-starter-explained-fast-4dn7
+This repo was bootstraped with [this ts starter](https://github.com/Code-Oz/basic-express-typescript).
 
-It's a very basic repo for people that want to start their own Express server supporting NodeJs
+API for get and save minesweeper board game.
+
+## Download
+
+```
+git clone https://github.com/carigonz/minesweeper.git
+```
 
 ## Install
 
@@ -15,15 +21,47 @@ npm install
 ```
 npm run dev
 ```
+Now you should see 
+> App is listening on port 3001 !
+## ENDPOINTS
+### [GET] http://localhost:3001/api/v0/round?params
+params :
+| Key    | Type   | Description  |
+| ------ |:------:| ------------:|
+| id     | string | last game id |
+| width  | number | board width  |
+| heigth | number | board width  |
 
-## Build TS file
+Should return a `{ board }` interface where new or last game board is formatted
+
+### [POST] http://localhost:3001/api/v0/round
+send post request to store board with payload Body :
+```
+interface Square {
+  isMine: boolean;
+  counter: number; // mines around
+  isCovered: boolean; // already revealed
+}
+
+interface Body {
+  id: string;
+  board: Square[];
+}
+
+```
+
+Should cache save current board and return id
+
+## Run tests
+
+```
+npm run test
+```
+
+## Run build
 
 ```
 npm run build
 ```
 
-## Run for prod
 
-```
-npm run prod
-```
