@@ -32,7 +32,7 @@ params :
 | width  | number | board width  |
 | heigth | number | board width  |
 
-Should return a `{ board }` interface where new or last game board is formatted
+Should return a `{ board }` object where `board` is an array of Square entities where new or last game board is formatted
 
 ### [POST] http://localhost:3001/api/v0/round
 send post request to store board with payload Body :
